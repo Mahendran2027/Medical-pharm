@@ -1,0 +1,6 @@
+{
+  "name": "PharmaStock - Real-Time Medicine & Inventory System",
+  "description": "Real-time medicine availability search, smart pharmacy inventory management, and time-limited reservation platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

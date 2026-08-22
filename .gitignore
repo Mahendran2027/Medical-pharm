@@ -1,0 +1,27 @@
+# Node dependencies & builds
+node_modules/
+build/
+dist/
+coverage/
+
+# OS / Editor files
+.DS_Store
+*.log
+.vscode/
+.vs/
+.idea/
+
+# Environment files
+.env
+.env.local
+.env.*
+!.env.example
+
+# .NET / C# Build output
+**/bin/
+**/obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
