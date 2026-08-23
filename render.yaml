@@ -1,0 +1,26 @@
+services:
+  # 1. Full-Stack Web Service (Node.js + Express + React Vite)
+  - type: web
+    name: medicine-locator-app
+    runtime: node
+    plan: free
+    region: oregon # or frankfurt, singapore, ohio
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GEMINI_API_KEY
+        sync: false # Set securely in Render Dashboard
+      - key: JWT_SECRET
+        generateValue: true # Render will generate a cryptographically random 256-bit string
+      - key: PORT
+        value: 10000
+
+  # 2. (Optional) Managed PostgreSQL Database if using durable SQL persistence
+  # Uncomment if you want Render to automatically provision a database:
+  # - type: postgres
+  #   name: medicine-locator-db
+  #   plan: free
+  #   region: oregon
+  #   ipAllowList: []
